@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+
+
+
+
+
+
+    <dat-gui style="position: absolute;right: 10px;top: 10px;z-index: 1000;">
+
+      <dat-value label="message" v-model="message"></dat-value>
+      <dat-value label="displayOutline" v-model="displayOutline"></dat-value>
+      <dat-value label="explode" @click="explode"></dat-value>
+      <dat-value label="maxSize" v-model="maxSize" :min="-10" :max="10" :step='0.25'></dat-value>
+      <dat-value label="height" v-model="height" :step='5'></dat-value>
+      <dat-value label="type" v-model="type" :values="[ 'one', 'two', 'three' ]"></dat-value>
+      <dat-value label="speed" v-model="speed" :values="{Stopped: 0, Slow: 0.1, Fast: 5}"></dat-value>
+      <dat-folder name="Colors">
+        <dat-color label="color0" v-model="color0"></dat-color>
+        <dat-color label="color1" v-model="color1"></dat-color>
+        <dat-color label="color2" v-model="color2"></dat-color>
+        <dat-color label="color3" v-model="color3"></dat-color>
+      </dat-folder>
+      <dat-folder name="Another Folder">
+        <dat-value label="noiseStrength" v-model="noiseStrength"></dat-value>
+      </dat-folder>
+      <dat-folder name="Folder open" open>
+        <dat-value label="noiseStrength" v-model="noiseStrength"></dat-value>
+      </dat-folder>
+      <dat-folder name="growthSpeed">
+        <dat-value label="growthSpeed" v-model="growthSpeed"></dat-value>
+      </dat-folder>
+      <dat-folder name="Text">
+        <dat-text label="text" v-model="text"></dat-text>
+      </dat-folder>
+      <dat-folder name="Image">
+        <dat-image label="imagePath1" v-model="imagePath1"></dat-image>
+      </dat-folder>
+      <dat-folder name="Plotter">
+        <dat-plotter label="plotter" v-model="value" :max='10' :period='0' type='line' fg-color='#fff' bg-color='#000'></dat-plotter>
+      </dat-folder>
+
+      <dat-folder name="Readonly">
+        <dat-value label="height" v-model="height" :step='5' :readonly='true'></dat-value>
+        <dat-text label="text" v-model="text" :readonly='true'></dat-text>
+        <dat-value label="message" v-model="message" :readonly='true'></dat-value>
+      </dat-folder>
+
+      <dat-folder name="Placeholder">
+        <dat-value label="height" v-model="height" :step='5' placeholder="a"></dat-value>
+        <dat-text label="text" v-model="text" placeholder="b"></dat-text>
+        <dat-value label="message" v-model="message" placeholder="c"></dat-value>
+      </dat-folder>
+
+      <dat-folder name="Password">
+        <dat-value label="message" v-model="message" :password='true'></dat-value>
+      </dat-folder>
+
+      <dat-folder name="Expand" :expand='true'>
+        <dat-value label="maxSize" v-model="maxSize" :min="-10" :max="10" :step='0.25'></dat-value>
+        <dat-value label="height" v-model="height" :step='5'></dat-value>
+        <dat-text label="text" v-model="text" placeholder="b"></dat-text>
+        <dat-value label="message" v-model="message"></dat-value>
+        <dat-value label="type" v-model="type" :values="[ 'one', 'two', 'three' ]"></dat-value>
+        <dat-plotter label="plotter" v-model="value" :max='10' :period='0' type='line' fg-color='#fff' bg-color='#000'></dat-plotter>
+        <dat-image label="imagePath1" v-model="imagePath1"></dat-image>
+      </dat-folder>
+
+      <dat-folder name="Recursive">
+        <dat-object label="recursive" v-model="recursive"></dat-object>
+      </dat-folder>
+
+      <dat-folder name="Tooltip" title='tooltip'>
+        <dat-value label="tooltip message" v-model="tooltip" title='tooltip'></dat-value>
+      </dat-folder>
+
+    </dat-gui>
+    <vue-json-pretty
+      :data="json"
+    >
+    </vue-json-pretty>
+  </div>
+  <script src="../../2.6.14-custom.js"></script>
+  <script src="../../vue-json-pretty/1.8.0-custom.js"></script>
+  <script src="../../../dat.gui/0.7.7-custom.js"></script>
+  <script src="0.0.1-custom.js"></script>
+  <style>
+    @import url('../../vue-json-pretty/1.8.0-custom.css');
+    @import url('../../../dat.gui/0.7.7-custom.css');
+ </style>
+  <SCript>
+    /* global Vue VueDatGui */
+    /* eslint-disable no-unused-vars */
+    Vue.use(VueDatGui)
+    Vue.component('vue-json-pretty', VueJsonPretty.default)
+
+    var app = new Vue({
+      el: '#app',
+      data: {
+        message: 'Hello World',
+        displayOutline: false,
+
+        maxSize: 6.0,
+        speed: 5,
+
+        height: 10,
+        noiseStrength: 10.2,
+        growthSpeed: 0.2,
+
+        type: 'three',
+
+        color0: "#ffae23", // CSS string
+        color1: [ 0, 128, 255 ], // RGB array
+        color2: [ 0, 128, 255, 0.3 ], // RGB with alpha
+        color3: { h: 350, s: 0.9, v: 0.3 }, // Hue, saturation, value
+
+        text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
+
+        imagePath1: 'https://images.unsplash.com/photo-1516222338250-863216ce01ea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=467&q=50',
+
+        value: 5,
+
+        recursive:{
+          name:'a',
+          children:[
+            {
+              name:'b',
+              children:[
+
+              ]
+            }
+          ]
+        },
+
+        tooltip:'hello world'
+
+      },
+      computed: {
+        json () {
+          return this.$data
+        }
+      },
+      created:function(){
+        setInterval(() => {
+          this.value = Math.floor( Math.random() * 40 ) ;
+        }, 10);
+      },
+      methods: {
+        explode: function () {
+          alert('Bang!');
+        }
+      }
+    })
+  </SCript>
+</body>
+</html>

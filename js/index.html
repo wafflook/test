@@ -1,0 +1,277 @@
+<!doctype html>
+ <html>
+  <head>
+
+    <title>keyx</title>
+
+    <meta charset='utf-8'>
+    <meta content='Yusuke Sano' name='author'>
+    <meta content='telephone=no,address=no,email=no,date=no,url=no' name='format-detection'>
+    <meta content='noimageindex,notranslate,nosnippet,noarchive,nofollow,noindex' name='robots'>
+    <meta content='Protected by a master password, and only you have access to it' name='description'>
+    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' name='viewport'>
+
+    <link href='js/jquery/Fomantic-UI/2.8.8.css' rel='stylesheet'>
+    <link href='manifest.json' rel='manifest'>
+    <link href='favicon.ico' rel='icon'>
+
+    <script src='js/dat.gui/0.7.7-custom.js'></script>
+
+    <!-- 便利 -->
+    <script src='js/lodash-cli/4.17.21.js'></script>
+
+    <!-- 符号化 -->
+    <script src='js/base64-js/1.5.1.js'></script>
+    <script src='js/js-sha256/0.9.0.js'></script>
+    <!-- キー入力 -->
+    <script src='js/simple-keyboard/3.4.139.js'></script>
+    <script src='js/swipe-keyboard/2.2.471.js'></script>
+    <!-- アプリＵＩ-->
+    <script src='js/jquery/4.0.0-pre.js'></script>
+
+    <script src='js/jquery/Fomantic-UI/components/dropdown.js'></script>
+    <script src='js/jquery/Fomantic-UI/components/transition.js'></script>
+    <!-- モジュール化 -->
+    <script src='js/vue/2.7.8.js'></script>
+    <script src='js/vue/vue-router/2.8.1.js'></script>
+    <!-- パスワード強度 -->
+    <script src='js/zxcvbn/4.4.2.js'></script>
+    <script src='js/zxcvbn/language/ja/ts.js'></script>
+    <script src='js/zxcvbn/language/common/ts.js'></script>
+
+    <script src='js/vue/vue-dat-gui/VueDatGui.umd.js'></script>
+
+
+    <!-- アプリケーション -->
+    <script src='index.js'></script>
+
+
+
+
+    <style>
+      /* https://github.com/Semantic-Org/UI-Dropdown/issues/6 */
+      @import url('js/dat.gui/0.7.7-custom.css');
+      @import url('css/dat-gui-light-theme/0.0.1-custom.css');
+      @import url('https://unpkg.com/webkul-micron@1.1.6/dist/css/micron.min.css');
+      @import url('js/jquery/Fomantic-UI/components/transition.css');
+      @import url('js/simple-keyboard/css/index.css');
+      @import url('asset/font/index.css');
+      @import url('index.css');
+
+      html, body {
+    font: 12px 'M+2VM+IPAG circle';
+    -webkit-text-stroke: 0.3px;
+} 
+.ui.form .fields{
+  margin-bottom:1em !important;
+}
+
+
+.dg {
+  width: 100% !important;
+  font: 11px "M+2VM+IPAG circle Regular";
+}
+.dg li.cr,
+.dg li.folder {
+  border-left: none !important;
+}
+.dg li.title {
+  margin-left: 0 !important;
+}
+.dg li.cr select {
+  font-family: "Meiryo";
+}
+.dg li.cr.number input[type=text] {
+  font-family: "Gidole Regular";
+}
+.dg li.cr:last-child {
+  border-bottom: none !important;
+}
+.dg > .close-button {
+  display: none;
+}
+
+   </style>
+  <style>
+    @media only screen and (max-width: 767.98px) {
+      .ui.form .fields {
+        flex-wrap:inherit;
+      }
+    }
+
+    .keyboardContainer .swipeCanvasElement{
+      z-index:9 !important;
+    }
+
+
+
+    /* https://qiita.com/teppeita/items/b2df3f73c66883ab49be */
+    .ui.search.dropdown > .text{
+      text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow:hidden;
+  width:100%;
+    }
+
+
+    .ui.dropdown > .text > img, .ui.dropdown > .text > .image:not(.icon), .ui.dropdown .menu > .item > .image:not(.icon), .ui.dropdown .menu > .item > img{
+      margin-right:0;
+    }
+
+    .ui.selection.dropdown .menu > .item{
+      /* padding:0.58571429rem 1.14285714rem; */
+      padding:0.98571429rem 0.3285714rem;
+    }
+
+    .ui.dropdown .menu > .item{
+      min-height:auto;
+    }
+
+    /* .ui.selection.dropdown{
+      border-left:none;
+      border-top-left-radius:0;
+      border-bottom-left-radius:0;
+      
+    } */
+    .ui.label.corner {
+      box-shadow:rgba(16, 36, 94, 0.4) 0 1px 2px 0;
+    }
+    .ui.segments{
+      border:none;
+      box-shadow:none;
+    }
+    .ui.form .field > label{
+      font-family: 'あずきフォント';
+    }
+    .ui.popup.fitted{
+      padding:0;
+    }
+
+    .ui.action > .button{
+      border:1px solid rgba(34, 36, 38, 0.15);
+    }
+
+
+    .ui.search.selection.dropdown > input.search {
+  line-height: 1.21428571em;
+  padding: 0.47857143em 3.2em 0.37857143em 1em;
+}
+
+    .ui.selection.dropdown{
+      background:beige;
+    }
+    .ui.search.dropdown > input.search{
+      background:beige;
+    }
+
+    .ui.icon.buttons .button, .ui.icon.button:not(.animated):not(.compact):not(.labeled) {
+  padding: 0.48571429em 0.48571429em 0.48571429em;
+}
+.ui.search.selection.dropdown > input.search {
+  line-height: 1.21428571em;
+  padding: 0.47857143em 3.2em 0.47857143em 1em;
+}
+
+    .ui.form input:not([type]),
+    .ui.form input[type="color"],
+    .ui.form input[type="date"],
+    .ui.form input[type="datetime-local"],
+    .ui.form input[type="email"],
+    .ui.form input[type="month"],
+    .ui.form input[type="number"],
+    .ui.form input[type="password"],
+    .ui.form input[type="search"],
+    .ui.form input[type="tel"],
+    .ui.form input[type="time"],
+    .ui.form input[type="text"],
+    .ui.form input[type="file"],
+    .ui.form input[type="url"],
+    .ui.form input[type="week"]{
+      font-size:1.2em;
+      line-height:1em;
+      padding:0.539285715em 1em;
+      font-family:'Gidole';
+      background:beige;
+    }
+
+    .ui.form input:not([type]):focus,
+    .ui.form input[type="color"]:focus,
+    .ui.form input[type="date"]:focus,
+    .ui.form input[type="datetime-local"]:focus,
+    .ui.form input[type="email"]:focus,
+    .ui.form input[type="month"]:focus,
+    .ui.form input[type="number"]:focus,
+    .ui.form input[type="password"]:focus,
+    .ui.form input[type="search"]:focus,
+    .ui.form input[type="tel"]:focus,
+    .ui.form input[type="time"]:focus,
+    .ui.form input[type="text"]:focus,
+    .ui.form input[type="file"]:focus,
+    .ui.form input[type="url"]:focus,
+    .ui.form input[type="week"]:focus {
+      color: rgba(0, 0, 0, 0.95);
+      border-color: #85B7D9;
+      background: beige;
+    }
+
+    i.icon, i.icons {
+      font-size:1.5em;
+    }
+    .ui.icon.input > i.icon::before, .ui.icon.input > i.icon::after{
+      width: 75%;
+    }
+
+    .ui.labeled.input>.label{
+      border: 1px solid rgba(34, 36, 38, 0.15);
+  border-right: none;
+    }
+    
+
+    .ui.input > input:focus::-webkit-calendar-picker-indicator,
+.ui.icon.input > textarea:focus ~ i.icon,
+.ui.icon.input > input:focus ~ i.icon {
+opacity: 1;
+color: #6ca;
+
+}
+textarea::selection,
+input::selection {
+
+color: rgba(0, 0, 0, 0.87);
+}
+
+ </style>
+  <style>
+    html,
+    body{
+      font:12px 'M+2VM+IPAG circle';
+      -webkit-text-stroke:.3px;
+    }
+
+ </style>
+  <style>
+    @media only screen and (min-width: 768px) {
+      body{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      main{
+        width:350px;
+      }
+      .ui.segments{
+        border-bottom:2px solid rgba(34,36,38,.15);
+        box-shadow:rgba(16, 36, 94, 0.4) 0 2px 6px 0;
+        -webkit-box-shadow:rgba(16, 36, 94, 0.4) 0 2px 6px 0;
+      }
+
+      
+    }
+ </style>
+    
+ </head>
+  <body>
+    <main>
+   </main>
+ </body>
+</html>

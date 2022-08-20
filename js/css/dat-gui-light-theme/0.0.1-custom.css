@@ -1,0 +1,76 @@
+/*
+ * 文字色
+ */
+.dg {
+  color: #555;
+  text-shadow: none !important;
+}
+/*
+ * フォルダ内の背景色とコントローラの区切線
+ */
+.dg li:not(.folder) {
+  background: #fafafa;
+  border-bottom: 1px solid #ddd;
+}
+/*
+ * フォルダの背景色とアイコン
+ */
+.dg li.title {
+  background: #eee url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAJUlEQVQYV2NkwAIYsQoaGxv/R5cAq0SWOHv2LCNcO0gCJABSBADyXgmeJxQWTwAAAABJRU5ErkJggg==) 6px 10px no-repeat;
+}
+.dg .closed li.title {
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAJElEQVQYV2NkgAJjY+P/Z8+eZQRxwQQIgARBNEgCQ5A4lTAzAWKLEZ6E8TjEAAAAAElFTkSuQmCC)
+}
+/*
+ * ボタン.閉じる
+ */
+.dg.main .close-button {
+  background-color: #eee;
+}
+.dg.main .close-button:hover {
+  background-color: #ddd;
+}
+/*
+ * 文字色
+ */
+.dg .cr.text textarea,
+.dg .cr.string input[type=text],
+.dg .cr.string input[type=password]{
+  color:#333;
+}
+/*
+ * 背景色
+ */
+.dg .c textarea,
+.dg .c div.slider,
+.dg .c input[type=text],
+.dg .c input[type=password] {
+  background: #eee;
+  color:#333;
+}
+/*
+ * 背景色(hover&focus)
+ */
+.dg .c textarea:hover,
+.dg .c div.slider:hover,
+.dg .c input[type=text]:hover,
+.dg .c input[type=password]:hover {
+  background: #fff;
+}
+.dg .c textarea:focus,
+.dg .c div.slider:focus,
+.dg .c input[type=text]:focus,
+.dg .c input[type=password]:focus {
+  background: #fff;
+  color:#333;
+}
+.dg .cr.boolean:hover,
+.dg .cr.function:hover{
+  background: #fff;
+}
+/*
+ *
+ */
+.dg .cr.color input[type=text]{
+  font-weight:normal !important;
+}

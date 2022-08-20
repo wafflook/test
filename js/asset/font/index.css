@@ -1,0 +1,113 @@
+@charset "UTF-8";
+@font-face {
+  font-style: normal;
+  font-weight: normal;
+  font-family: "851チカラヅヨク-かなA";
+  src: url("pm85122/851チカラヅヨク-かなA/0.04.eot");
+  src: url("pm85122/851チカラヅヨク-かなA/0.04.eot?#iefix") format("embedded-opentype"), url("pm85122/851チカラヅヨク-かなA/0.04.ttf") format("truetype"), url("pm85122/851チカラヅヨク-かなA/0.04.woff") format("woff2"), url("pm85122/851チカラヅヨク-かなA/0.04.woff") format("woff"), url("pm85122/851チカラヅヨク-かなA/0.04.svg?#webfont") format("svg");
+}
+@font-face {
+  font-style: normal;
+  font-weight: normal;
+  font-family: "851チカラヅヨク-かなB";
+  src: url("pm85122/851チカラヅヨク-かなB/0.04.eot");
+  src: url("pm85122/851チカラヅヨク-かなB/0.04.eot?#iefix") format("embedded-opentype"), url("pm85122/851チカラヅヨク-かなB/0.04.ttf") format("truetype"), url("pm85122/851チカラヅヨク-かなB/0.04.woff") format("woff2"), url("pm85122/851チカラヅヨク-かなB/0.04.woff") format("woff"), url("pm85122/851チカラヅヨク-かなB/0.04.svg?#webfont") format("svg");
+}
+@font-face {
+  font-style: normal;
+  font-weight: normal;
+  font-family: "851手書き雑フォント";
+  src: url("pm85122/851手書き雑フォント/0.833.eot");
+  src: url("pm85122/851手書き雑フォント/0.833.eot?#iefix") format("embedded-opentype"), url("pm85122/851手書き雑フォント/0.833.ttf") format("truetype"), url("pm85122/851手書き雑フォント/0.833.woff") format("woff2"), url("pm85122/851手書き雑フォント/0.833.woff") format("woff"), url("pm85122/851手書き雑フォント/0.833.svg?#webfont") format("svg");
+}
+@font-face {
+  font-style: normal;
+  font-weight: normal;
+  font-family: "Ｎちはやフォント＋";
+  src: url("chihaya/Ｎちはやフォント＋/1.2.1.eot");
+  src: url("chihaya/Ｎちはやフォント＋/1.2.1.eot?#iefix") format("embedded-opentype"), url("chihaya/Ｎちはやフォント＋/1.2.1.ttf") format("truetype"), url("chihaya/Ｎちはやフォント＋/1.2.1.woff") format("woff2"), url("chihaya/Ｎちはやフォント＋/1.2.1.woff") format("woff"), url("chihaya/Ｎちはやフォント＋/1.2.1.svg?#webfont") format("svg");
+}
+@font-face {
+  font-style: normal;
+  font-weight: normal;
+  font-family: "851テガキカクット";
+  src: url("pm85122/851テガキカクット/0.04.eot");
+  src: url("pm85122/851テガキカクット/0.04.eot?#iefix") format("embedded-opentype"), url("pm85122/851テガキカクット/0.04.ttf") format("truetype"), url("pm85122/851テガキカクット/0.04.woff") format("woff2"), url("pm85122/851テガキカクット/0.04.woff") format("woff"), url("pm85122/851テガキカクット/0.04.svg?#webfont") format("svg");
+}
+@font-face {
+  font-style: normal;
+  font-weight: normal;
+  font-family: "モギハ・ペン字Font";
+  src: url("ahito/モギハ・ペン字Font/1.20.eot");
+  src: url("ahito/モギハ・ペン字Font/1.20.eot?#iefix") format("embedded-opentype"), url("ahito/モギハ・ペン字Font/1.20.ttf") format("truetype"), url("ahito/モギハ・ペン字Font/1.20.woff") format("woff2"), url("ahito/モギハ・ペン字Font/1.20.woff") format("woff"), url("ahito/モギハ・ペン字Font/1.20.svg?#webfont") format("svg");
+}
+@font-face {
+  font-style: normal;
+  font-weight: normal;
+  font-family: "Share Tech Mono";
+  src: url("google/Share Tech Mono/1.003.eot");
+  src: url("google/Share Tech Mono/1.003.eot?#iefix") format("embedded-opentype"), url("google/Share Tech Mono/1.003.ttf") format("truetype"), url("google/Share Tech Mono/1.003.woff") format("woff2"), url("google/Share Tech Mono/1.003.woff") format("woff"), url("google/Share Tech Mono/1.003.svg?#webfont") format("svg");
+}
+@font-face {
+  font-style: normal;
+  font-weight: normal;
+  font-family: "851ゴチカクット";
+  src: url("pm85122/851ゴチカクット/0.05.eot");
+  src: url("pm85122/851ゴチカクット/0.05.eot?#iefix") format("embedded-opentype"), url("pm85122/851ゴチカクット/0.05.ttf") format("truetype"), url("pm85122/851ゴチカクット/0.05.woff") format("woff2"), url("pm85122/851ゴチカクット/0.05.woff") format("woff"), url("pm85122/851ゴチカクット/0.05.svg?#webfont") format("svg");
+}
+@font-face {
+  font-style: normal;
+  font-weight: normal;
+  font-family: "851チカラヨワク";
+  src: url("pm85122/851チカラヨワク/0.02.eot");
+  src: url("pm85122/851チカラヨワク/0.02.eot?#iefix") format("embedded-opentype"), url("pm85122/851チカラヨワク/0.02.ttf") format("truetype"), url("pm85122/851チカラヨワク/0.02.woff") format("woff2"), url("pm85122/851チカラヨワク/0.02.woff") format("woff"), url("pm85122/851チカラヨワク/0.02.svg?#webfont") format("svg");
+}
+@font-face {
+  font-style: normal;
+  font-weight: normal;
+  font-family: "M+2VM+IPAG circle";
+  src: url("ipa/M+2VM+IPAG circle/1.011.eot");
+  src: url("ipa/M+2VM+IPAG circle/1.011.eot?#iefix") format("embedded-opentype"), url("ipa/M+2VM+IPAG circle/1.011.ttf") format("truetype"), url("ipa/M+2VM+IPAG circle/1.011.woff") format("woff2"), url("ipa/M+2VM+IPAG circle/1.011.woff") format("woff"), url("ipa/M+2VM+IPAG circle/1.011.svg?#webfont") format("svg");
+}
+@font-face {
+  font-style: normal;
+  font-weight: normal;
+  font-family: "851マカポップ";
+  src: url("pm85122/851マカポップ/1.01.eot");
+  src: url("pm85122/851マカポップ/1.01.eot?#iefix") format("embedded-opentype"), url("pm85122/851マカポップ/1.01.ttf") format("truetype"), url("pm85122/851マカポップ/1.01.woff") format("woff2"), url("pm85122/851マカポップ/1.01.woff") format("woff"), url("pm85122/851マカポップ/1.01.svg?#webfont") format("svg");
+}
+@font-face {
+  font-style: normal;
+  font-weight: normal;
+  font-family: "うずらフォント";
+  src: url("azusa/うずらフォント/1.00.eot");
+  src: url("azusa/うずらフォント/1.00.eot?#iefix") format("embedded-opentype"), url("azusa/うずらフォント/1.00.ttf") format("truetype"), url("azusa/うずらフォント/1.00.woff") format("woff2"), url("azusa/うずらフォント/1.00.woff") format("woff"), url("azusa/うずらフォント/1.00.svg?#webfont") format("svg");
+}
+@font-face {
+  font-style: normal;
+  font-weight: normal;
+  font-family: "あずきフォント";
+  src: url("azusa/あずきフォント/1.21.eot");
+  src: url("azusa/あずきフォント/1.21.eot?#iefix") format("embedded-opentype"), url("azusa/あずきフォント/1.21.ttf") format("truetype"), url("azusa/あずきフォント/1.21.woff") format("woff2"), url("azusa/あずきフォント/1.21.woff") format("woff"), url("azusa/あずきフォント/1.21.svg?#webfont") format("svg");
+}
+@font-face {
+  font-style: normal;
+  font-weight: normal;
+  font-family: "851レトロゴ";
+  src: url("pm85122/851レトロゴ/0.07.eot");
+  src: url("pm85122/851レトロゴ/0.07.eot?#iefix") format("embedded-opentype"), url("pm85122/851レトロゴ/0.07.ttf") format("truetype"), url("pm85122/851レトロゴ/0.07.woff") format("woff2"), url("pm85122/851レトロゴ/0.07.woff") format("woff"), url("pm85122/851レトロゴ/0.07.svg?#webfont") format("svg");
+}
+@font-face {
+  font-style: normal;
+  font-weight: normal;
+  font-family: "Gidolinya";
+  src: url("larsenwork/Gidolinya/1.0.3.eot");
+  src: url("larsenwork/Gidolinya/1.0.3.eot?#iefix") format("embedded-opentype"), url("larsenwork/Gidolinya/1.0.3.ttf") format("truetype"), url("larsenwork/Gidolinya/1.0.3.woff") format("woff2"), url("larsenwork/Gidolinya/1.0.3.woff") format("woff"), url("larsenwork/Gidolinya/1.0.3.svg?#webfont") format("svg");
+}
+@font-face {
+  font-style: normal;
+  font-weight: normal;
+  font-family: "Gidole";
+  src: url("larsenwork/Gidole/2.1.eot");
+  src: url("larsenwork/Gidole/2.1.eot?#iefix") format("embedded-opentype"), url("larsenwork/Gidole/2.1.ttf") format("truetype"), url("larsenwork/Gidole/2.1.woff") format("woff2"), url("larsenwork/Gidole/2.1.woff") format("woff"), url("larsenwork/Gidole/2.1.svg?#webfont") format("svg");
+}

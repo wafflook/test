@@ -1,0 +1,30 @@
+@mixin font-face($project, $name, $version, $weight: normal, $style: normal){
+  @font-face {
+    font-style  : $style;
+    font-weight : $weight;
+    font-family : '#{$name}';
+    src: url('#{$project}/#{$name}/#{$version}.eot');
+    src: url('#{$project}/#{$name}/#{$version}.eot?#iefix')   format('embedded-opentype'),
+         url('#{$project}/#{$name}/#{$version}.ttf')          format('truetype'),
+         url('#{$project}/#{$name}/#{$version}.woff')         format('woff2'),
+         url('#{$project}/#{$name}/#{$version}.woff')         format('woff'),
+         url('#{$project}/#{$name}/#{$version}.svg?#webfont') format('svg');
+  }
+}
+
+@include font-face('pm85122','851チカラヅヨク-かなA','0.04');
+@include font-face('pm85122','851チカラヅヨク-かなB','0.04');
+@include font-face('pm85122','851手書き雑フォント','0.833');
+@include font-face('chihaya','Ｎちはやフォント＋','1.2.1');
+@include font-face('pm85122','851テガキカクット','0.04');
+@include font-face('ahito','モギハ・ペン字Font','1.20');
+@include font-face('google','Share Tech Mono','1.003');
+@include font-face('pm85122','851ゴチカクット','0.05');
+@include font-face('pm85122','851チカラヨワク','0.02');
+@include font-face('ipa','M+2VM+IPAG circle','1.011');
+@include font-face('pm85122','851マカポップ','1.01');
+@include font-face('azusa','うずらフォント','1.00');
+@include font-face('azusa','あずきフォント','1.21');
+@include font-face('pm85122','851レトロゴ','0.07');
+@include font-face('larsenwork','Gidolinya','1.0.3');
+@include font-face('larsenwork','Gidole','2.1');

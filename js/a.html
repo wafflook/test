@@ -1,0 +1,13 @@
+ <script src='js/lodash-cli/4.17.21.js'></script>
+<script>
+  var obj = { x:[],a:[],b:[]}
+  console.dir(
+
+
+   _(obj).        toPairs()
+        .orderBy(1, 'asc')
+        .fromPairs().value()
+
+  )
+
+</script>

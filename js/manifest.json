@@ -1,0 +1,20 @@
+{
+  "id"              : "keyx",
+  "short_name"      : "keyx",
+  "name"            : "keyx",
+  "start_url"       : "index.html",
+  "description"     : "Protected by a master password, and only you have access to it",
+  "display"         : "standalone",
+  "orientation"     : "any",
+  "theme_color"     : "white",
+  "background_color": "white",
+  "icons":
+  [
+    {"src": "asset/icon/36.png"   , "sizes": "36x36"  , "type": "image/png"},
+    {"src": "asset/icon/48.png"   , "sizes": "48x48"  , "type": "image/png"},
+    {"src": "asset/icon/72.png"   , "sizes": "72x72"  , "type": "image/png"},
+    {"src": "asset/icon/96.png"   , "sizes": "96x96"  , "type": "image/png"},
+    {"src": "asset/icon/144.png"  , "sizes": "144x144", "type": "image/png"},
+    {"src": "asset/icon/192.png"  , "sizes": "192x192", "type": "image/png"}
+  ]
+}

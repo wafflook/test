@@ -1018,7 +1018,7 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticStyle: { position: "relative", width: "300px", padding: "0" } },
+    { staticStyle: { position: "relative", width: "100%", padding: "0" } },
     [_c("router-view")],
     1
   )
